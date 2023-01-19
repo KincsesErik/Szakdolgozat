@@ -62,7 +62,8 @@ button:hover{
 
 h1 {
 	text-align: center;
-	color: rgb(0, 0, 0);
+	color: rgb(43, 41, 41);
+	font-size: 60px;
 }
 
 a {
@@ -85,5 +86,5 @@ a:hover{
 
    ::ng-deep .navCss nav
 {
-      background-color: #CEDD43;
+      background-color: #4d1792;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Game Haven</title>
+    <link rel="icon" type="image/x-icon" href="images/gamehaven.png">
 </head>
 <body>
 <body style="background-color:#4618AC;">
@@ -15,7 +16,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+  <img src='images/gamehaven.png' width="45" height="40" class="d-inline-block align-top" alt="LOGO">
   <a class="navbar-brand" href="#"><b>Game Haven</b></a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -24,7 +25,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="Bejelentkezes.php">Bejelentkezés</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
