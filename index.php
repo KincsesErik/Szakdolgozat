@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Game Haven</title>
-    <link rel="icon" type="image/x-icon" href="images/gamehaven.png">
-</head>
-<body>
-<body style="background-color:#4618AC;">
-<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" class="navCss"
+    <link rel="icon" type="image/x-icon" href="images/gamehaveen.png">
+    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" class="navCss"
   [containerInside]="false">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5825cc">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <img src='images/gamehaven.png' width="45" height="40" class="d-inline-block align-top" alt="LOGO">
-  <a class="navbar-brand" href="#"><b>Game Haven</b></a>
+  <img src='images/gamehaveen.png' width="45" height="40" class="d-inline-block align-top" alt="LOGO">
+  <a class="navbar-brand" href="#"><b> Game Haven</b></a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -27,6 +24,16 @@
       <li class="nav-item">
         <a class="nav-link" href="Bejelentkezes.php">Bejelentkezés</a>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Platform
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">PC</a>
+          <a class="dropdown-item" href="#">Play Station</a>
+          <a class="dropdown-item" href="#">Nintendo</a>
+        </div>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Keresés" aria-label="Search">
@@ -34,4 +41,11 @@
     </form>
   </div>
 </nav>
+</head>
+<body style="background-color:#4618AC;">
+
+
+
+
+
 </body>  

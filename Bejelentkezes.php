@@ -10,7 +10,7 @@
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	<?php } ?>
-     	<label>Felhasznalónév</label>
+     	<label>Felhasználónév</label>
      	<input type="text" name="uname" placeholder="Felhasználónév"><br>
 
      	<label>Jelszó</label>
