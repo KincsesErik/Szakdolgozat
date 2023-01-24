@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Game Haven</title>
     <link rel="icon" type="image/x-icon" href="images/gamehaveen.png">
     </head>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5825cc">
       <div class="container-fluid">
         <img src='images/gamehaveen.png' width="45" height="40" class="d-inline-block align-top" alt="LOGO">
         <a class="navbar-brand" href="#">Game Haven</a>
@@ -45,40 +46,6 @@
       </div>
     </nav>
 
-    <!--<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" class="navCss"
-  [containerInside]="false">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5825cc">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <img src='images/gamehaveen.png' width="45" height="40" class="d-inline-block align-top" alt="LOGO">
-      <a class="navbar-brand" href="#"><b> Game Haven</b></a>
-
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Bejelentkezes.php">Bejelentkezés</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Platform
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">PC</a>
-              <a class="dropdown-item" href="#">Play Station</a>
-              <a class="dropdown-item" href="#">Nintendo</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Keresés" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keres</button>
-        </form>
-      </div>
-    </nav>-->
 </head>
 <body style="background-color:#4618AC;">
 
