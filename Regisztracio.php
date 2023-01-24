@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="loginstyle.css">
 </head>
 <body>
-     <form action="login.php" method="post">
+     <form action="register.php" method="post">
      	<h2>Regisztráció</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
@@ -15,7 +15,7 @@
                <p class="success"><?php echo $_GET['success']; ?></p>
           <?php } ?>
 
-		  
+
 		 <label>Név</label>
           <?php if (isset($_GET['name'])) { ?>
                <input type="text" name="name" placeholder="Név"
@@ -41,5 +41,7 @@
      	<button type="submit">Regisztráció</button>
          <a href="Bejelentkezes.php" class="ca">Csináltál már fiókot?</a>
      </form>
+	 <?php	
+	 ?>
 </body>
 </html>
