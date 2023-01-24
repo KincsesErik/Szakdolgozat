@@ -19,3 +19,54 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 	$name = validate($_POST['name']);
 
 	$user_data = 'uname='. $uname. '&name='. $name;
+   
+    if (empty($uname)) {
+		header("Location: signup.php?error=Felhasználónév kötelező&$user_data");
+	    exit();
+	}else if(empty($pass)){
+        header("Location: signup.php?error=A jelszó kötelező&$user_data");
+	    exit();
+	}
+	else if(empty($re_pass)){
+        header("Location: signup.php?error=A jelszó megerősítés szükséges&$user_data");
+	    exit();
+	}
+
+	else if(empty($name)){
+        header("Location: signup.php?error=A név kötelező&$user_data");
+	    exit();
+	}
+
+	else if($pass !== $re_pass){
+        header("Location: signup.php?error=A két jelszó nem egyezik meg&$user_data");
+	    exit();
+	}
+
+	else{
+
+        // jelszó titkosítás
+        $pass = md5($pass);
+
+	    $sql = "SELECT * FROM felhasznalo WHERE felhasznalonev='$uname' ";
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+			header("Location: signup.php?error=A felhasználónév foglalt, kérlek válassz másikat&$user_data");
+	        exit();
+		}else {
+           $sql2 = "INSERT INTO felhasznalo(felhasznalonev, jelszo, nev) VALUES('$uname', '$pass', '$name')";
+           $result2 = mysqli_query($conn, $sql2);
+           if ($result2) {
+           	 header("Location: signup.php?success=A fiókod sikeresen létrehozva!");
+	         exit();
+           }else {
+	           	header("Location: signup.php?error=unknown error occurred&$user_data");
+		        exit();
+           }
+		}
+	}
+	
+}else{
+	header("Location: Regisztracio.php");
+	exit();
+}
