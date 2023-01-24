@@ -79,3 +79,7 @@ a {
 a:hover{
 	opacity: .7;
 }
+
+.ca:hover {
+	text-decoration: underline;
+} 

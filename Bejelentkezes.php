@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Bejelentkezés</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="loginstyle.css">
 </head>
 <body>
      <form action="login.php" method="post">
@@ -17,6 +17,7 @@
      	<input type="password" name="password" placeholder="Jelszó"><br>
 
      	<button type="submit">Bejelentkezés</button>
+		 <a href="Regisztracio.php" class="ca">Regisztráció</a>
      </form>
 </body>
 </html>
