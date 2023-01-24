@@ -15,10 +15,10 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 	$pass = validate($_POST['password']);
 
 	if (empty($uname)) {
-		header("Location: index.php?error=Felhasználónév szükséges");
+		header("Location: Bejelentkezes.php?error=Felhasználónév szükséges");
 	    exit();
 	}else if(empty($pass)){
-        header("Location: index.php?error=Jelszó szükséges");
+        header("Location: Bejelentkezes.php?error=Jelszó szükséges");
 	    exit();
 	}else{
 		$sql = "SELECT * FROM felhasznalo WHERE felhasznalonev='$uname' AND jelszo='$pass'";
@@ -34,16 +34,16 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
             	header("Location: home.php");
 		        exit();
             }else{
-				header("Location: index.php?error=Helytelen felhasználónév vagy jelszó");
+				header("Location: Bejelentkezes.php?error=Helytelen felhasználónév vagy jelszó");
 		        exit();
 			}
 		}else{
-			header("Location: index.php?error=Helytelen felhasználónév vagy jelszó");
+			header("Location: Bejelentkezes.php?error=Helytelen felhasználónév vagy jelszó");
 	        exit();
 		}
 	}
 	
 }else{
-	header("Location: index.php");
+	header("Location: Bejelentkezes.php");
 	exit();
 }

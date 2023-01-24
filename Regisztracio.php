@@ -14,12 +14,23 @@
 		 <?php if (isset($_GET['success'])) { ?>
                <p class="success"><?php echo $_GET['success']; ?></p>
           <?php } ?>
-		  
-     	<label>Név</label>
-     	<input type="text" name="uname" placeholder="Név"><br>
 
-         <label>Felhasználónév</label>
-     	<input type="text" name="uname" placeholder="Felhasználónév"><br>
+		  
+		 <label>Név</label>
+          <?php if (isset($_GET['name'])) { ?>
+               <input type="text" name="name" placeholder="Név"
+                      value="<?php echo $_GET['name']; ?>"><br>
+          <?php }else{ ?>
+               <input type="text"  name="name" placeholder="Név"><br>
+          <?php }?>
+
+		 <label>Felhasználónév</label>
+          <?php if (isset($_GET['uname'])) { ?>
+               <input type="text"  name="uname"  placeholder="Felhasználónév"
+                      value="<?php echo $_GET['uname']; ?>"><br>
+          <?php }else{ ?>
+               <input type="text" name="uname"  placeholder="Felhasználónév"><br>
+          <?php }?>
 
      	<label>Jelszó</label>
      	<input type="password" name="password" placeholder="Jelszó"><br>
