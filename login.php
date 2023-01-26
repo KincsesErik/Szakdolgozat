@@ -21,13 +21,17 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
         header("Location: Bejelentkezes.php?error=Jelszó szükséges");
 	    exit();
 	}else{
+
+		//jelszó titkosítás
+		$pass = md5($pass);
+		
 		$sql = "SELECT * FROM felhasznalo WHERE felhasznalonev='$uname' AND jelszo='$pass'";
 
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) === 1) {
 			$row = mysqli_fetch_assoc($result);
-            if ($row['felhasznalonev'] === $uname && $row['jelszo'] === $pass) {
+            if ($row['felhasznalonev'] === $uname && $row['jelszo'] === ($pass)) {
             	$_SESSION['felhasznalonev'] = $row['felhasznalonev'];
             	$_SESSION['nev'] = $row['nev'];
             	$_SESSION['id'] = $row['id'];
