@@ -1,3 +1,4 @@
 <?php
-    require_once 'View/Layout/header.php';
+    require_once '../Layout/header.php';
 ?>
+
