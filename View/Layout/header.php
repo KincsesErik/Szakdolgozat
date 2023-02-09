@@ -25,7 +25,7 @@
               <a class="nav-link active" aria-current="page" href="#">Kezdőlap</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../View\Users\Bejelentkezes.php">Bejelentkezés</a>
+              <a class="nav-link" href="../../View\Users\Bejelentkezes.php">Bejelentkezés/Regisztráció</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,6 +40,7 @@
             <li class="nav-item">
             </li>
           </ul>
+          </ul class="mx-auto">
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Keresés" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Keres</button>
