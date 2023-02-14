@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="loginstyle.css">
 </head>
 <body>
-     <form action="register.php" method="post">
+     <form action="../../Controller\register.php" method="post">
      	<h2>Regisztráció</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
