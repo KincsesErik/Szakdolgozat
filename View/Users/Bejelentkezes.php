@@ -17,7 +17,7 @@
      	<input type="password" name="password" placeholder="Jelszó"><br>
 
      	<button type="submit">Bejelentkezés</button>
-		 <a href="Regisztracio.php" class="ca">Regisztráció</a>
+		 <a href="index.php?page=Main" class="ca">Regisztráció</a>
      </form>
 </body>
 </html>
