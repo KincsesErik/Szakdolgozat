@@ -13,10 +13,10 @@
 	<ul>
 		<li>
 			<div class="slidetitle"> 
-				<span>Kung-Fu Panda</span>
+				<span>Assassin's Creed Mirage</span>
 			</div>
 			<a href='#'>
-				<img src="https://i.imgur.com/lwYJ4rx.jpg"/>
+				<img src="../../images\acm.png"/>
 			</a>
 		</li>
 		<li>
@@ -37,10 +37,10 @@
 		</li>
 		<li>
 			<div class="slidetitle"> 
-				<span>Up</span>
+				<span>God Of War</span>
 			</div>
 			<a href='#'>
-				<img src="https://i.imgur.com/WBTntRU.jpg"/>
+				<img src="../../images\gow.jpg"/>
 			</a>
 		</li>
 		<li>
@@ -49,6 +49,30 @@
 			</div>
 			<a href='#'>
 				<img src="../../images\callisto.jpg"/>
+			</a>
+		</li>
+		<li>
+			<div class="slidetitle"> 
+				<span>Elden Ring</span>
+			</div>
+			<a href='#'>
+				<img src="../../images\er.jpg"/>
+			</a>
+		</li>
+		<li>
+			<div class="slidetitle"> 
+				<span>Rainbow Six Siege </span>
+			</div>
+			<a href='#'>
+				<img src="../../images\r6.jpg"/>
+			</a>
+		</li>
+		<li>
+			<div class="slidetitle"> 
+				<span>Red Dead Redemption 2</span>
+			</div>
+			<a href='#'>
+				<img src="../../images\rd2.jpg"/>
 			</a>
 		</li>
 	</ul>
