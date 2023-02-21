@@ -115,6 +115,10 @@
     </div>
 </div>
 
+<div class="card">
+    <h2>Játék</h2>
+</div>
+
 <?php
     require_once '../Layout/footer.php';
 ?>
