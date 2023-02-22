@@ -115,7 +115,10 @@
     </div>
 </div>
 
+<br>
+
 <div class="card">
+<link rel="stylesheet" type="text/css" href="cards.css">
     <h2>Játék</h2>
 </div>
 

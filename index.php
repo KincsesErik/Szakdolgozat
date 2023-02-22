@@ -2,11 +2,11 @@
 
     session_start();
 
-    require 'Model/db_inc.php';
+    require 'db_inc.php';
     $db = new DataBase();
 
     
-    $page = $_REQUEST['page'] ?? "Main";
+    $page = $_REQUEST['page'] ?? "index";
 
     $controllerFile = 'controller/'.$page.'.php';
 
