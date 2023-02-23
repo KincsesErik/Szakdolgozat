@@ -8,7 +8,7 @@
     
     $page = $_REQUEST['page'] ?? "index";
 
-    $controllerFile = 'controller/'.$page.'.php';
+    $controllerFile = 'Controller/'.$page.'.php';
 
     if(file_exists($controllerFile)){
         require $controllerFile;

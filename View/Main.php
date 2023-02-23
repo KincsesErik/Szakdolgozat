@@ -1,5 +1,5 @@
 <?php
-    require_once '../Layout/header.php';
+    include '../Layout/header.php';
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
@@ -123,5 +123,5 @@
 </div>
 
 <?php
-    require_once '../Layout/footer.php';
+    include '../Layout/footer.php';
 ?>
