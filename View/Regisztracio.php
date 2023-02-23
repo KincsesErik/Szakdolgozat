@@ -2,10 +2,10 @@
 <html>
 <head>
 	<title>Regisztráció</title>
-	<link rel="stylesheet" type="text/css" href="loginstyle.css">
+	<link rel="stylesheet" type="text/css" href="assets\css\loginstyle.css">
 </head>
 <body>
-     <form action="../../Controller\register.php" method="post">
+     <form action="Controller\register.php" method="post">
      	<h2>Regisztráció</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>

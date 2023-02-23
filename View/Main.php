@@ -1,11 +1,11 @@
 <?php
-    include '../Layout/header.php';
+    include 'Layout/header.php';
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="sliderstyle.css">
+    <link rel="stylesheet" type="text/css" href="assets\css\sliderstyle.css">
 	<title>CSS slideshow</title>
 </head>
   <body>
@@ -16,7 +16,7 @@
 				<span>Assassin's Creed Mirage</span>
 			</div>
 			<a href='#'>
-				<img src="../../images\acm.png"/>
+				<img src="assets/images/acm.png"/>
 			</a>
 		</li>
 		<li>
@@ -40,7 +40,7 @@
 				<span>God Of War</span>
 			</div>
 			<a href='#'>
-				<img src="../../images\gow.jpg"/>
+				<img src="assets\images\gow.jpg"/>
 			</a>
 		</li>
 		<li>
@@ -48,7 +48,7 @@
 				<span>Calisto Protocol</span>
 			</div>
 			<a href='#'>
-				<img src="../../images\callisto.jpg"/>
+				<img src="assets\images\callisto.jpg"/>
 			</a>
 		</li>
 		<li>
@@ -56,7 +56,7 @@
 				<span>Elden Ring</span>
 			</div>
 			<a href='#'>
-				<img src="../../images\er.jpg"/>
+				<img src="assets\images\er.jpg"/>
 			</a>
 		</li>
 		<li>
@@ -64,7 +64,7 @@
 				<span>Rainbow Six Siege </span>
 			</div>
 			<a href='#'>
-				<img src="../../images\r6.jpg"/>
+				<img src="assets\images\r6.jpg"/>
 			</a>
 		</li>
 		<li>
@@ -72,7 +72,7 @@
 				<span>Red Dead Redemption 2</span>
 			</div>
 			<a href='#'>
-				<img src="../../images\rd2.jpg"/>
+				<img src="assets\images\rd2.jpg"/>
 			</a>
 		</li>
 	</ul>
@@ -118,10 +118,10 @@
 <br>
 
 <div class="card">
-<link rel="stylesheet" type="text/css" href="cards.css">
+<link rel="stylesheet" type="text/css" href="assets\css\cards.css">
     <h2>Játék</h2>
 </div>
 
 <?php
-    include '../Layout/footer.php';
+    include 'Layout/footer.php';
 ?>

@@ -15,10 +15,10 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 	$pass = validate($_POST['password']);
 
 	if (empty($uname)) {
-		header("Location: ../View\Users\Bejelentkezes.php?error=Felhasználónév szükséges");
+		header("Location: View\Bejelentkezes.php?error=Felhasználónév szükséges");
 	    exit();
 	}else if(empty($pass)){
-        header("Location: ../View\Users\Bejelentkezes.php?error=Jelszó szükséges");
+        header("Location: View\Bejelentkezes.php?error=Jelszó szükséges");
 	    exit();
 	}else{
 
@@ -38,16 +38,16 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
             	header("Location: ../View\Index\home.php");
 		        exit();
             }else{
-				header("Location: ../View\Users\Bejelentkezes.php?error=Helytelen felhasználónév vagy jelszó");
+				header("Location: View\Bejelentkezes.php?error=Helytelen felhasználónév vagy jelszó");
 		        exit();
 			}
 		}else{
-			header("Location: ../View\Users\Bejelentkezes.php?error=Helytelen felhasználónév vagy jelszó");
+			header("Location: View\Bejelentkezes.php?error=Helytelen felhasználónév vagy jelszó");
 	        exit();
 		}
 	}
 	
 }else{
-	header("Location:../View\Users\Bejelentkezes.php");
+	header("Location: View\Bejelentkezes.php");
 	exit();
 }

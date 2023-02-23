@@ -1,3 +1,3 @@
 <?php
-require 'View/Main.php';
+require 'View\Main.php';
 ?>
