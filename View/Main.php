@@ -87,8 +87,12 @@
                 <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
                 <div class="card-body">
                     <h5 class="card-title">játék neve</h5>
+					<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
                     <p class="card-text"></p>
-                    <a class="btn btn-primary" href="games.php">Megnézem</a>
                 </div>
             </div>
         </div>
@@ -98,7 +102,11 @@
                 <div class="card-body">
                     <h5 class="card-title">játék neve</h5>
                     <p class="card-text"></p>
-                    <a class="btn btn-primary" href="games.php">Megnézem</a>
+					<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
                 </div>
             </div>
         </div>
@@ -108,20 +116,31 @@
                 <div class="card-body">
                     <h5 class="card-title">játék neve</h5>
                     <p class="card-text"></p>
-                    <a class="btn btn-primary" href="games.php">Megnézem</a>
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+
 <br>
 
+
+
 <div class="card">
-<link rel="stylesheet" type="text/css" href="assets\css\cards.css">
+<link rel="stylesheet" type="text/css" href="../assets\css\cards.css">
+  <img src="assets\images\gamehaven.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Jane Doe</b></h4> 
+    <p>Interior Designer</p> 
+  </div>
 </div>
-
-
 
 
 <?php

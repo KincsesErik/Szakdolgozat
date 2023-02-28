@@ -15,7 +15,7 @@ class Felhasznalo{
     }
 
     
-    public function registerUser($uname, $name, $password){
+    public function registerUser($uname, $password, $name){
         $sql = "INSERT INTO user (id, felhasznalonev, jelszo, nev) VALUES (NULL,'$uname','".md5($password)."','$name',1)";
         $result = $this->db->dbinsert($sql);
     }
