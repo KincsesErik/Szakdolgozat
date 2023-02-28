@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-include "db_inc.php";
+include "../db_inc.php";
 
 if (isset($_POST['uname']) && isset($_POST['password'])
     && isset($_POST['name']) && isset($_POST['re_password'])) {
@@ -21,24 +21,24 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 	$user_data = 'uname='. $uname. '&name='. $name;
    
     if (empty($uname)) {
-		header("Location: View\Regisztracio.php?error=Felhasználónév kötelező&$user_data");
+		header("Location: ../View\Regisztracio.php?error=Felhasználónév kötelező&$user_data");
 	    exit();
 	}else if(empty($pass)){
-        header("Location: View\Regisztracio.php?error=A jelszó kötelező&$user_data");
+        header("Location: ../View\Regisztracio.php?error=A jelszó kötelező&$user_data");
 	    exit();
 	}
 	else if(empty($re_pass)){
-        header("Location: View\Regisztracio.php?error=A jelszó megerősítés szükséges&$user_data");
+        header("Location: ../View\Regisztracio.php?error=A jelszó megerősítés szükséges&$user_data");
 	    exit();
 	}
 
 	else if(empty($name)){
-        header("Location: View\Regisztracio.php?error=A név kötelező&$user_data");
+        header("Location: ../View\Regisztracio.php?error=A név kötelező&$user_data");
 	    exit();
 	}
 
 	else if($pass !== $re_pass){
-        header("Location: View\Regisztracio.php?error=A két jelszó nem egyezik meg&$user_data");
+        header("Location: ../View\Regisztracio.php?error=A két jelszó nem egyezik meg&$user_data");
 	    exit();
 	}
 
@@ -51,22 +51,22 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
-			header("Location: View\Regisztracio.php?error=A felhasználónév foglalt, kérlek válassz másikat&$user_data");
+			header("Location: ../View\Regisztracio.php?error=A felhasználónév foglalt, kérlek válassz másikat&$user_data");
 	        exit();
 		}else {
            $sql2 = "INSERT INTO felhasznalo(felhasznalonev, jelszo, nev) VALUES('$uname', '$pass', '$name')";
            $result2 = mysqli_query($conn, $sql2);
            if ($result2) {
-           	 header("Location: View\Regisztracio.php?success=A fiókod sikeresen létrehozva!");
+           	 header("Location: ../View\Regisztracio.php?success=A fiókod sikeresen létrehozva!");
 	         exit();
            }else {
-	           	header("Location: View\Regisztracio.php?error=Valamiért nem sikerült regisztrálni, próbáld újra&$user_data");
+	           	header("Location: ../View\Regisztracio.php?error=Valamiért nem sikerült regisztrálni, próbáld újra&$user_data");
 		        exit();
            }
 		}
 	}
 	
 }else{
-	header("Location: View\Regisztracio.php");
+	header("Location: ../View\Regisztracio.php");
 	exit();
 }

@@ -84,7 +84,7 @@
     <div class="row mt-5">
         <div class="col-12 col-md-4">
             <div class="card">
-                <img alt="Card image cap" class="card-img-top" src="../../images\gamehaven.png">
+                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
                 <div class="card-body">
                     <h5 class="card-title">játék neve</h5>
                     <p class="card-text"></p>
@@ -94,7 +94,7 @@
         </div>
         <div class="col-12 col-md-4">
             <div class="card">
-                <img alt="Card image cap" class="card-img-top" src="../../images\gamehaven.png">
+                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
                 <div class="card-body">
                     <h5 class="card-title">játék neve</h5>
                     <p class="card-text"></p>
@@ -104,7 +104,7 @@
         </div>
         <div class="col-12 col-md-4">
             <div class="card">
-                <img alt="Card image cap" class="card-img-top" src="../../images\gamehaven.png">
+                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
                 <div class="card-body">
                     <h5 class="card-title">játék neve</h5>
                     <p class="card-text"></p>
@@ -119,8 +119,10 @@
 
 <div class="card">
 <link rel="stylesheet" type="text/css" href="assets\css\cards.css">
-    <h2>Játék</h2>
 </div>
+
+
+
 
 <?php
     include 'Layout/footer.php';
