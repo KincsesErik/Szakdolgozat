@@ -82,7 +82,7 @@
 </html>
 <div class="container">
     <div class="row mt-5">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-2">
             <div class="card">
                 <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
                 <div class="card-body">
@@ -96,7 +96,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-2">
             <div class="card">
                 <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
                 <div class="card-body">
@@ -110,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-2">
             <div class="card">
                 <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
                 <div class="card-body">
@@ -125,22 +125,62 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+		<div class="col-12 col-md-2">
+            <div class="card">
+                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
+                <div class="card-body">
+                    <h5 class="card-title">játék neve</h5>
+                    <p class="card-text"></p>
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+                </div>
+            </div>
+        </div>
+		<div class="col-12 col-md-2">
+            <div class="card">
+                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
+                <div class="card-body">
+                    <h5 class="card-title">játék neve</h5>
+                    <p class="card-text"></p>
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+                </div>
+            </div>
+        </div>
+		<div class="col-12 col-md-2">
+            <div class="card">
+                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
+                <div class="card-body">
+                    <h5 class="card-title">játék neve</h5>
+                    <p class="card-text"></p>
+<fieldset class="rating">
+<link rel="stylesheet" type="text/css" href="assets\css\rate.css">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"></label>
+</fieldset>
+                </div>
+            </div>
+        </div>
+	</div>
 
 
 <br>
-
-
-
-<div class="card">
-<link rel="stylesheet" type="text/css" href="../assets\css\cards.css">
-  <img src="assets\images\gamehaven.png" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Jane Doe</b></h4> 
-    <p>Interior Designer</p> 
-  </div>
-</div>
 
 
 <?php
