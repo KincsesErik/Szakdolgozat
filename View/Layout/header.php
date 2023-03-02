@@ -25,7 +25,7 @@
               <a class="nav-link active" aria-current="page" href="#">Kezdőlap</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="View\Bejelentkezes.php">Bejelentkezés/Regisztráció</a>
+              <a class="nav-link" href="index.php?page=login&action=login">Bejelentkezés/Regisztráció</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

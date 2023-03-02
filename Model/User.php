@@ -14,7 +14,7 @@ class Felhasznalo{
         $this->db=$db;
     }
 
-    public function checkLogin($username, $password){
+    public function checkLogin($uname, $password){
         $sql = "SELECT * FROM felhasznalo WHERE felhasznalonev = '".$_POST['uname']."'";
         if($result = $this->db->dbselect($sql)){
             if($row = $result->fetch_assoc()){
@@ -25,7 +25,7 @@ class Felhasznalo{
                         $_SESSION["id"] = $row['id'];
                     }
                     else{
-                        $loginResult = 1 ;//incorrect password
+                        $loginResult = 1 ;
                     }
                 }
                 else{
@@ -34,13 +34,13 @@ class Felhasznalo{
             }
         }
         else{
-            $loginResult = 0; //incorrect username
+            $loginResult = 0; 
         }
         return $loginResult;
     }
     
-    public function registerUser($uname, $password, $name){
-        $sql = "INSERT INTO user (id, felhasznalonev, jelszo, nev) VALUES (NULL,'$uname','".md5($password)."','$name')";
+    public function registerUser($name, $uname, $password){
+        $sql = "INSERT INTO felhasznalo (id, felhasznalonev, jelszo, nev) VALUES (NULL,'$uname','".md5($password)."','$name')";
         $result = $this->db->dbinsert($sql);
     }
 }

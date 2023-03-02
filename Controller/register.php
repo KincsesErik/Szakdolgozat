@@ -1,5 +1,6 @@
-<?php 
-include "../db_inc.php";
+<?php
+require 'Model/User.php';
+$user= new Felhasznalo($db);
 
 function __construct($db){
 	$this->db=$db;
@@ -22,8 +23,14 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 	$name = validate($_POST['name']);
 
 	$user_data = 'uname='. $uname. '&name='. $name;
+
+	if(isset($_POST['name']) && isset($_POST['uname']) && isset($_POST['password'])){
+		$user->registerUser($_POST['name'],$_POST['uname'],$_POST['password']);
+	}
+
+
    
-    if (empty($uname)) {
+ /*    if (empty($uname)) {
 		header("Location: ../View\Regisztracio.php?error=Felhasználónév kötelező&$user_data");
 	    exit();
 	}else if(empty($pass)){
@@ -43,33 +50,32 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 	else if($pass !== $re_pass){
         header("Location: ../View\Regisztracio.php?error=A két jelszó nem egyezik meg&$user_data");
 	    exit();
-	}
+	} */
 
-	else{
+	//else{
 
         // jelszó titkosítás
-        $pass = md5($pass);
 
-	    $sql = "SELECT * FROM felhasznalo WHERE felhasznalonev='$uname' ";
-		$result = mysqli_query($conn, $sql);
-
-		if (mysqli_num_rows($result) > 0) {
-			header("Location: ../View\Regisztracio.php?error=A felhasználónév foglalt, kérlek válassz másikat&$user_data");
+	
+		/*if (mysqli_num_rows($result) > 0) {
+			header("Location: ../View\Regisztracio.php?error=A felhasználónév foglalt, kérlek válassz másikat&".$user_data);
 	        exit();
 		}else {
            $sql2 = "INSERT INTO felhasznalo(felhasznalonev, jelszo, nev) VALUES('$uname', '$pass', '$name')";
-           $result2 = mysqli_query($conn, $sql2);
+           
            if ($result2) {
            	 header("Location: ../View\Regisztracio.php?success=A fiókod sikeresen létrehozva!");
 	         exit();
            }else {
-	           	header("Location: ../View\Regisztracio.php?error=Valamiért nem sikerült regisztrálni, próbáld újra&$user_data");
+	           	header("Location: ../View\Regisztracio.php?error=Valamiért nem sikerült regisztrálni, próbáld újra&".$user_data);
 		        exit();
            }
 		}
-	}
+	}*/
 	
-}else{
+/*}else{
 	header("Location: ../View\Regisztracio.php");
 	exit();
-}
+}*/
+	}
+require 'View/Regisztracio.php';
