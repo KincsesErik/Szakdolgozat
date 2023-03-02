@@ -13,32 +13,28 @@ class Felhasznalo{
     function __construct($db){
         $this->db=$db;
     }
-
-    public function checkLogin($uname, $password){
-        $sql = "SELECT * FROM felhasznalo WHERE felhasznalonev = '".$_POST['uname']."'";
-        if($result = $this->db->dbselect($sql)){
-            if($row = $result->fetch_assoc()){
-                if($row['felhasznalonev'] == $uname){
-                    if($row['jelszo'] == md5($password)){
-                        $loginResult = 2 ;//successful login
-                        $_SESSION["felhasznalonev"] = $row['felhasznalonev'];
-                        $_SESSION["id"] = $row['id'];
-                    }
-                    else{
-                        $loginResult = 1 ;
-                    }
+    
+    public function checkLogin($uname, $password) {
+        $sql = "SELECT * FROM felhasznalo WHERE felhasznalonev = '".$uname."'";
+        // van ilyen felhasználó?    
+        if($result = $this->db->dbSelect($sql)) {
+            if($row = $result->fetch_assoc()) {
+                if($row['Jelszo'] == md5($password)) {
+                    $eredmeny = 2; // Sikeres belépés
+                    $_SESSION["nev"] = $row['Nev'];
+                    $_SESSION["id"] = $row['ID'];
                 }
-                else{
-                    echo "Rossz felhasznalonév.";
+                else {
+                    $eredmeny = 1; // Sikertelen belépés: hibás jelszó!
                 }
             }
         }
-        else{
-            $loginResult = 0; 
+        else {
+            $eredmeny = 0; // Nincs ilyen felhasználónév
         }
-        return $loginResult;
+        return $eredmeny;
     }
-    
+
     public function registerUser($name, $uname, $password){
         $sql = "INSERT INTO felhasznalo (id, felhasznalonev, jelszo, nev) VALUES (NULL,'$uname','".md5($password)."','$name')";
         $result = $this->db->dbinsert($sql);
