@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="assets\css\loginstyle.css">
 </head>
 <body>
-     <form action="" method="post">
+     <form action="index.php" method="post">
      	<h2>Regisztráció</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
@@ -21,7 +21,7 @@
                <input type="text" name="name" placeholder="Név"
                       value="<?php echo $_GET['name']; ?>"><br>
           <?php }else{ ?>
-               <input type="text"  name="name" placeholder="Név"><br>
+               <input type="text"  name="name" placeholder="Név"required><br>
           <?php }?>
 
 		 <label>Felhasználónév</label>
@@ -29,14 +29,14 @@
                <input type="text"  name="uname"  placeholder="Felhasználónév"
                       value="<?php echo $_GET['uname']; ?>"><br>
           <?php }else{ ?>
-               <input type="text" name="uname"  placeholder="Felhasználónév"><br>
+               <input type="text" name="uname"  placeholder="Felhasználónév"required><br>
           <?php }?>
 
      	<label>Jelszó</label>
-     	<input type="password" name="password" placeholder="Jelszó"><br>
+     	<input type="password" name="password" placeholder="Jelszó" required><br>
 
          <label>Jelszó újra</label>
-     	<input type="password" name="re_password" placeholder="Jelszó újra"><br>
+     	<input type="password" name="re_password" placeholder="Jelszó újra"required><br>
 
      	<button type="submit">Regisztráció</button>
          <a href="index.php?page=login" class="ca">Csináltál már fiókot?</a>

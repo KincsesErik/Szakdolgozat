@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="assets\css\loginstyle.css">
 </head>
 <body>
-	<form action="" method="post">
+	<form action="index.php" method="post">
      	<h2>Bejelentkezés</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>

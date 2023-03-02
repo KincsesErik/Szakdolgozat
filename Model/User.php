@@ -19,10 +19,10 @@ class Felhasznalo{
         // van ilyen felhasználó?    
         if($result = $this->db->dbSelect($sql)) {
             if($row = $result->fetch_assoc()) {
-                if($row['Jelszo'] == md5($password)) {
+                if($row['jelszo'] == md5($password)) {
                     $eredmeny = 2; // Sikeres belépés
-                    $_SESSION["nev"] = $row['Nev'];
-                    $_SESSION["id"] = $row['ID'];
+                    $_SESSION["nev"] = $row['nev'];
+                    $_SESSION["id"] = $row['id'];
                 }
                 else {
                     $eredmeny = 1; // Sikertelen belépés: hibás jelszó!

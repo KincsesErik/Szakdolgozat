@@ -78,4 +78,6 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 	exit();
 }*/
 	}
+
+	
 require 'View/Regisztracio.php';

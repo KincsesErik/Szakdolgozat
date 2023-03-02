@@ -10,15 +10,16 @@ $action = "";
 $action = $_REQUEST['action'] ?? "";
 
 $loginReaction = array(
-	"Login Failed: Wrong Username",
-	"Login Failed: Wrong Password",
-	"Login Successful",
+	"Sikertelen bejeltkezés: Nincs ilyen felhasználónév",
+	"Sikertelen bejeltkezés: Rossz jelszó",
+	"Sikeres bejelentkezés",
+	
 );
 
 switch ($action){
 	case 'logout':
 		session_unset();
-		$loginResult = "Logged out Successful";
+		$loginResult = "Sikeresen Kijelentkeztél!";
 	break;
 
 	case 'login':
@@ -32,6 +33,5 @@ switch ($action){
 		}
 	break;
 }
-print_r ($_POST);
-print_r ($_SESSION);
+//print_r($_SESSION);
 require 'View/Bejelentkezes.php';
