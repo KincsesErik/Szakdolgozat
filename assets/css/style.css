@@ -3,3 +3,12 @@ body {
 	font: 1.6rem/1.5 "metropolis",Arial,Helvetica,sans-serif
 	
 }
+
+h1 {
+	color: #fff;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}

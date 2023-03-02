@@ -5,6 +5,7 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets\css\sliderstyle.css">
 	<title>CSS slideshow</title>
 </head>
@@ -80,13 +81,22 @@
 		
 </body>
 </html>
+
+<br>
+
+<h1>ㅤㅤㅤNeked Ajánlott <i style="font-size:24px" class="fa"title="Az ajánlások a felhasználói tevékenységi adatokon alapulnak, beleértve a termékmegtekintéseket, a kosárba való hozzáadásokat, a kívánságlista-feltöltéseket és a vásárlásokat. Bejelentkezéskor az ajánlások személyre szabottak; egyébként ugyanazon országból származó felhasználók adatain alapulnak">&#xf017;</i></h1>
+
 <div class="container">
-    <div class="row mt-5">
-        <div class="col-12 col-md-2">
-            <div class="card">
-                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
-                <div class="card-body">
-                    <h5 class="card-title">játék neve</h5>
+<div class="row mt-5">
+<div class="row">
+    <?php
+    for ($i = 0; $i < 5; $i++) {
+        echo '<div class="col-12 col-md-2">
+                <div class="card">
+                    <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
+                    <div class="card-body">
+                        <h5 class="card-title">játék neve</h5>
+                        <p class="card-text"></p>
 <fieldset class="rating">
 	<link rel="stylesheet" type="text/css" href="assets\css\rate.css">
     <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
@@ -95,78 +105,13 @@
     <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
     <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
 </fieldset>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-2">
-            <div class="card">
-                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
-                <div class="card-body">
-                    <h5 class="card-title">játék neve</h5>
-                    <p class="card-text"></p>
-<fieldset class="rating">
-	<link rel="stylesheet" type="text/css" href="assets\css\rate.css">
-    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
-    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
-    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
-    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
-    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
-</fieldset>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-2">
-            <div class="card">
-                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
-                <div class="card-body">
-                    <h5 class="card-title">játék neve</h5>
-                    <p class="card-text"></p>
-<fieldset class="rating">
-	<link rel="stylesheet" type="text/css" href="assets\css\rate.css">
-    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
-    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
-    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
-    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
-    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
-</fieldset>
-                </div>
-            </div>
-        </div>
-		<div class="col-12 col-md-2">
-            <div class="card">
-                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
-                <div class="card-body">
-                    <h5 class="card-title">játék neve</h5>
-                    <p class="card-text"></p>
-<fieldset class="rating">
-	<link rel="stylesheet" type="text/css" href="assets\css\rate.css">
-    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
-    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
-    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
-    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
-    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
-</fieldset>
-                </div>
-            </div>
-        </div>
-		<div class="col-12 col-md-2">
-            <div class="card">
-                <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
-                <div class="card-body">
-                    <h5 class="card-title">játék neve</h5>
-                    <p class="card-text"></p>
-<fieldset class="rating">
-	<link rel="stylesheet" type="text/css" href="assets\css\rate.css">
-    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
-    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
-    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
-    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
-    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
-</fieldset>
-                </div>
-            </div>
-        </div>
-	</div>
+			</div>
+		</div>
+	</div>';
+
+	}
+?>
+</div>
 
 	<br>
 
