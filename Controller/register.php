@@ -1,6 +1,9 @@
 <?php 
-session_start(); 
 include "../db_inc.php";
+
+function __construct($db){
+	$this->db=$db;
+}
 
 if (isset($_POST['uname']) && isset($_POST['password'])
     && isset($_POST['name']) && isset($_POST['re_password'])) {

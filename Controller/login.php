@@ -1,6 +1,10 @@
 <?php 
-session_start(); 
-include "../db_inc.php";
+
+require_once "../db_inc.php";
+
+function __construct($db){
+	$this->db=$db;
+}
 
 if (isset($_POST['uname']) && isset($_POST['password'])) {
 
@@ -25,7 +29,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 		//jelszó titkosítás
 		$pass = md5($pass);
 		
-		$sql = "SELECT * FROM felhasznalo WHERE felhasznalonev='$uname' AND jelszo='$pass'";
+		$sql = "SELECT * FROM felhasznalo WHERE felhasznalonev='".$uname."' AND jelszo='".$pass."'";
 
 		$result = mysqli_query($conn, $sql);
 
