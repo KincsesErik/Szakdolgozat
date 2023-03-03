@@ -94,18 +94,21 @@
         for ($i = 0; $i < 4; $i++) {
             echo '<div class="col-12 col-md-3 mb-4">
                     <div class="card">
-                        <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
-                        <div class="card-body">
-                            <h5 class="card-title">Játék Neve</h5>
-                            <p class="card-text"></p>
-                            <fieldset class="rating">
-                                <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
-                                <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
-                                <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
-                            </fieldset>
-                        </div>
+                        <a href="View\Games.php">
+                            <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
+                            <div class="card-body">
+                            </a>
+                                <h5 class="card-title">Játék Neve</h5>
+                                <p class="card-text"></p>
+                                <fieldset class="rating">
+                                    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
+                                    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+                                    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+                                    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+                                    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+                                </fieldset>
+                            </div>
+                        
                     </div>
                 </div>';
         }
@@ -116,10 +119,9 @@
 
 
 <hr>
-
 <br>
 
-<h1>ㅤㅤㅤTOP játékok <i style="font-size:24px" class="fa" title="Javaslatok a felhasználók által legjobbra értékelt termékeken alapulna">&#xf017;</i></h1>
+<h1>ㅤㅤㅤTOP játékok <i style="font-size:24px" class="fa" title="Javaslatok a felhasználók által legjobbra értékelt termékeken alapulnak">&#xf017;</i></h1>
 
 <div class="container">
     <link rel="stylesheet" type="text/css" href="assets\css\cards.css">
@@ -171,7 +173,65 @@
 
     </div>
 
-    <button type="button" onclick="window.location.href='?show_more=true'" class="btn btn-primary"button style="display: block; margin: 0 auto;">További Kártyák Betöltése</button>
+    <button type="button" onclick="window.location.href='?show_more=true'" class="btn btn-primary"button style="display: block; margin: 0 auto;">További Játékok Betöltése</button>
+</div>
+
+<hr>
+<br>
+
+<h1>ㅤㅤㅤKözelgő játékok <i style="font-size:24px" class="fa" title="Mostanába megjelent, vagy a jövőben megjelenő termékeken alapulnak">&#xf017;</i></h1>
+
+<div class="container">
+    <link rel="stylesheet" type="text/css" href="assets\css\cards.css">
+
+    <div class="row mt-5">
+        <?php
+        for ($i = 0; $i < 4; $i++) {
+            echo '<div class="col-12 col-md-3 mb-4">
+                    <div class="card">
+                        <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
+                        <div class="card-body">
+                            <h5 class="card-title">Játék Neve</h5>
+                            <p class="card-text"></p>
+                            <fieldset class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>';
+        }
+        ?>
+
+        <?php
+        if (isset($_GET['show_more1'])) {
+            for ($i = 0; $i < 4; $i++) {
+                echo '<div class="col-12 col-md-3 mb-4">
+                        <div class="card">
+                            <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
+                            <div class="card-body">
+                                <h5 class="card-title">Játék Neve</h5>
+                                <p class="card-text"></p>
+                                <fieldset class="rating">
+                                    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
+                                    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+                                    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+                                    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+                                    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>';
+            }
+        }
+        ?>
+
+    </div>
+
+    <button type="button" onclick="window.location.href='?show_more1=true'" class="btn btn-primary"button style="display: block; margin: 0 auto;">További Játékok Betöltése</button>
 </div>
 
 
