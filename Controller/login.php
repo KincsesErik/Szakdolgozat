@@ -20,6 +20,8 @@ switch ($action){
 	case 'logout':
 		session_unset();
 		$loginResult = "Sikeresen Kijelentkeztél!";
+		header("Location: index.php?page=index");
+			exit();
 	break;
 
 	case 'login':
