@@ -30,7 +30,15 @@ switch ($action){
 		$loginResult = $loginReaction[$login];
 
 		echo $loginResult . "<br>";
+
+
+		if($login == 2) {
+			header("Location: index.php?page=index");
+			exit();
 		}
+
+		}
+		
 	break;
 }
 //print_r($_SESSION);

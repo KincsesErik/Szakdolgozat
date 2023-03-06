@@ -45,6 +45,11 @@
             <input class="form-control me-2" type="search" placeholder="Keresés" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Keres</button>
           </form>
+          <div>
+            <?php
+              echo $_SESSION['nev']
+            ?>
+          </div>
         </div>
       </div>
     </nav>
