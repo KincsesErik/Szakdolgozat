@@ -23,6 +23,7 @@ class Felhasznalo{
                     $eredmeny = 2; // Sikeres belépés
                     $_SESSION["nev"] = $row['nev'];
                     $_SESSION["id"] = $row['id'];
+                    $_SESSION["jogosultsag"] = $row['jogosultsag'];
                 }
                 else {
                     $eredmeny = 1; // Sikertelen belépés: hibás jelszó!

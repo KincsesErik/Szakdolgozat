@@ -15,47 +15,55 @@
 
 <body>
   
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5825cc">
-    <div class="container-fluid">
-      <img src='gamelogo.png' width="45" height="40" class="d-inline-block align-top" alt="LOGO">
-      <a class="navbar-brand" href="#">Game Haven</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Kezdőlap</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?page=login&action=login">Bejelentkezés/Regisztráció</a>
-          </li>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5825cc">
+  <div class="container-fluid">
+    <img src='gamelogo.png' width="45" height="40" class="d-inline-block align-top" alt="LOGO">
+    <a class="navbar-brand" href="#">Game Haven</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Kezdőlap</a>
+        </li>
+        <?php
+        if(!isset($_SESSION['id'])){
+          echo '<li class="nav-item">
+                  <a class="nav-link" href="index.php?page=login&action=login">Bejelentkezés/Regisztráció</a>
+                </li>';
+        }
+        ?>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Platform
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">PC</a></li>
+            <li><a class="dropdown-item" href="#">Play Station</a></li>
+            <li><a class="dropdown-item" href="#">Nintendo</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex justify-content-center" role="search">
+        <div class="input-group">
+          <input class="form-control me-2" type="search" placeholder="Keresés" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Keres</button>
+        </div>
+      </form>
+      <?php
+      if(isset($_SESSION['id'])){
+        echo'
+        <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Platform
+              '.$_SESSION['nev'].'
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">PC</a></li>
-              <li><a class="dropdown-item" href="#">Play Station</a></li>
-              <li><a class="dropdown-item" href="#">Nintendo</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex justify-content-center" role="search">
-          <div class="input-group">
-            <input class="form-control me-2" type="search" placeholder="Keresés" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Keres</button>
-          </div>
-        </form>
-              <?php
-              if(isset($_SESSION['id'])){
-                echo'
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        '.$_SESSION['nev'].'
-                    </a>
-                      <ul class="dropdown-menu dropdown-menu-end">
+            <ul class="dropdown-menu dropdown-menu-end">';
+            if($_SESSION['jogosultsag'] == "Admin"){
+              echo '<li><a class="dropdown-item" href="#">Admin</a></li>';
+                      }
+                      echo '
                         <li><a class="dropdown-item" href="#">Profil</a></li>
                         <li><a class="dropdown-item" href="index.php?page=login&action=logout">Kijelentkezés</a></li>
                       </ul>

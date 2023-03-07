@@ -183,53 +183,43 @@
 
 <div class="container">
     <link rel="stylesheet" type="text/css" href="assets\css\cards.css">
-    <link rel="stylesheet" type="text/css" href="assets\css\collapse.css">
 
     <div class="row mt-5">
-        <?php
-        for ($i = 0; $i < 4; $i++) {
-            echo '<div class="col-12 col-md-3 mb-4">
-                    <div class="card">
-                        <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
-                        <div class="card-body">
-                            <h5 class="card-title">Játék Neve</h5>
-                            <p class="card-text"></p>
-                            <fieldset class="rating">
-                                <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
-                                <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
-                                <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>';
-        }
-        ?>
-<div class="container">
-  <div class="content row">
+
     <?php
-      for ($i = 0; $i < 4; $i++) {
+    $showMore = isset($_GET['show_more1']) && $_GET['show_more1'] === 'true';
+    $cardCount = $showMore ? 8 : 4;
+    for ($i = 0; $i < $cardCount; $i++) {
         echo '<div class="col-12 col-md-3 mb-4">
                 <div class="card">
-                  <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
-                  <div class="card-body">
-                    <h5 class="card-title">Játék Neve</h5>
-                    <p class="card-text"></p>
-                    <fieldset class="rating">
-                      <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
-                      <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
-                      <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
-                      <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
-                      <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
-                    </fieldset>
-                  </div>
+                    <img alt="Card image cap" class="card-img-top" src="assets\images\gamehaven.png">
+                    <div class="card-body">
+                        <h5 class="card-title">Játék Neve</h5>
+                        <p class="card-text"></p>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" ></label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+                        </fieldset>
+                    </div>
                 </div>
-              </div>';
-      }
+            </div>';
+    }
     ?>
-  </div>
-  <button class="collapsible">További Játékok Betöltése</button>
+</div>
+
+<div class="row">
+    <div class="col-12 text-center">
+        <?php
+        if ($showMore) {
+            echo '<a href="?show_more1=false" class="btn btn-primary">Kevesebb</a>';
+        } else {
+            echo '<a href="?show_more1=true" class="btn btn-primary">További Játékok Betöltése</a>';
+        }
+        ?>
+    </div>
 </div>
 
 
