@@ -35,18 +35,85 @@
         </div>
         <div class="col py-3">
             <div id="content">Welcome to the admin panel!</div>
+            <div id="felhasznalok" style="display: none;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Felhasználónév</th>
+                            <th>Név</th>
+                            <th>Jogosultság</th>
+                        </tr>
+                    </thead>
+                    <tbody id="felhasznalok-body">
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
-<?php
-    require_once '../db_inc.php';
-    if (file_exists('../Model/User.php')) {
-        require_once '../Model/User.php';
-    } else {
-        echo 'Error: Model/User.php file not found';
+<script>
+    // adatbázisból felhasználók lekérése és táblázatba helyezése
+    function listazFelhasznalok() {
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let felhasznalok = JSON.parse(this.responseText);
+                let tbody = document.getElementById("felhasznalok-body");
+                for (let i = 0; i < felhasznalok.length; i++) {
+                    let tr = document.createElement("tr");
+                    let td1 = document.createElement("td");
+                    let td2 = document.createElement("td");
+                    let td3 = document.createElement("td");
+                    let td4 = document.createElement("td");
+                    td1.innerText = felhasznalok[i].id;
+                    td2.innerText = felhasznalok[i].felhasznalonev;
+                    td3.innerText = felhasznalok[i].nev;
+                    td4.innerText = felhasznalok[i].jogosultsag;
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+                    tr.appendChild(td4);
+                    tbody.appendChild(tr);
+                }
+            }
+        };
+        xhttp.open("GET", "felhasznalok.php", true);
+        xhttp.send();
     }
-    $szemely = new Szemely();
-    $users = $szemely->getAllUsersData();
-    print_r($_POST);
-?>
+    
+    // menüpont váltás kezelése
+    let menu = document.getElementById("menu");
+    menu.addEventListener("click", function(event) {
+        event.preventDefault();
+        let target = event.target;
+        if (target.getAttribute("data-bs-toggle") == "collapse") {
+            target.classList.toggle("collapsed");
+            let submenu = document.getElementById(target.getAttribute("href").substring(1));
+            submenu.classList.toggle("show");
+        } else {
+            let href = target.getAttribute("href").substring(1);
+            let content = document.getElementById(href);
+            let active = menu.querySelector(".active");
+            if (active) {
+                active.classList.remove("active");
+            }
+            target.classList.add("active");
+            document.title = target.innerText;
+            if (href == "felhasznalok") {
+                listazFelhasznalok();
+            } else {
+                content.style.display = "block";
+            }
+            let divs = content.parentNode.querySelectorAll(":scope > div");
+            for (let i = 0; i < divs.length; i++) {
+                if (divs[i].id != href) {
+                    divs[i].style.display = "none";
+                }
+            }
+        }
+    });
+</script>
+
+
 

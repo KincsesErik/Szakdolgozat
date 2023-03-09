@@ -60,7 +60,7 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-end">';
               if($_SESSION['jogosultsag'] == "Admin"){
-                echo '<li><a class="dropdown-item" href="View\Admin.php">Admin</a></li>';
+                echo '<li><a class="dropdown-item" href="index.php?page=admin">Admin</a></li>';
                         }
                         echo '
                           <li><a class="dropdown-item" href="#">Profil</a></li>
