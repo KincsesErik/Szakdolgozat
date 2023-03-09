@@ -16,6 +16,9 @@
      	<label>Jelszó</label>
      	<input type="password" name="password" placeholder="Jelszó"><br>
 
+		<input type="hidden" name="action" value="login">
+        <input type="hidden" name="page" value="login">
+		
      	<button type="submit">Bejelentkezés</button>
 		 <a href="index.php?page=register" class="ca">Regisztráció</a>
      </form>

@@ -37,7 +37,8 @@ switch ($action){
 		if($login == 2) {
 			header("Location: index.php?page=index");
 			exit();
-		}
+		} 
+		
 
 		}
 		

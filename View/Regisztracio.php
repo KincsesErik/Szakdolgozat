@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="assets\css\loginstyle.css">
 </head>
 <body>
-     <form action="index.php" method="post">
+     <form action="" method="post">
      	<h2>Regisztráció</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
@@ -39,6 +39,7 @@
      	<input type="password" name="re_password" placeholder="Jelszó újra"required><br>
 
      	<button type="submit">Regisztráció</button>
+          <input type="hidden" name="page" value="register">
          <a href="index.php?page=login" class="ca">Csináltál már fiókot?</a>
      </form>
 	 <?php	

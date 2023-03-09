@@ -1,5 +1,6 @@
 <?php
-require 'Model/User.php';
+print_r($_POST);
+require_once 'Model/User.php';
 $user= new Felhasznalo($db);
 
 function __construct($db){
